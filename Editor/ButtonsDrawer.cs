@@ -1,5 +1,6 @@
 //original: https://github.com/datsfain/EditorCools/tree/main/Assets/Tools/InspectorButton
 
+using Codice.CM.SEIDInfo;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,13 +9,13 @@ using UnityEngine;
 
 namespace AttributeExt
 {
+    [CustomPropertyDrawer(typeof(ButtonAttribute), true)]
     public class ButtonsDrawer
     {
-        public readonly List<IGrouping<string, Button>> ButtonGroups;
+        public readonly List<IGrouping<string, Button>> ButtonGroups = new List<IGrouping<string, Button>>();
 
         public ButtonsDrawer(object target)
         {
-            Debug.Log("tick");
             const BindingFlags flags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
             var methods = target.GetType().GetMethods(flags);
             var buttons = new List<Button>();
@@ -26,9 +27,6 @@ namespace AttributeExt
 
                 if (buttonAttribute == null)
                     continue;
-
-
-                Debug.Log("method paise. name: " + method.Name);
                 buttons.Add(new Button(method, buttonAttribute));
             }
 
