@@ -1,17 +1,18 @@
 {
   "name": "com.kaiyum.attributeext",
-  "author": "Md Al Kaiyum (Rumman)",
   "displayName": "AttributeExt",
   "version": "1.0.0",
   "unity": "2018.3",
-  "description": "A collection of useful attributes for unity engine.",
+  "description": "A collection of useful attributes",
   "category": "Unity",
   "keywords": [
     "attributes"
   ],
-  "author": 
-    {
-        "name": "Md Al Kaiyum (Rumman)",
-        "url": "https://github.com/kaiyumcg"
-    }
+  "dependencies": {
+    "com.kaiyum.editorutil": "https://github.com/kaiyumcg/EditorUtil.git"
+  },
+  "author": {
+    "name": "Md Al Kaiyum",
+    "url": "https://github.com/kaiyumcg"
+  }
 }

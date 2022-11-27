@@ -2,7 +2,8 @@
     "name": "AttributeExtEditor",
     "rootNamespace": "",
     "references": [
-        "AttributeExt"
+        "AttributeExt",
+        "EditorUtil"
     ],
     "includePlatforms": [
         "Editor"
