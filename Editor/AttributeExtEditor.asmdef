@@ -3,7 +3,7 @@
     "rootNamespace": "",
     "references": [
         "AttributeExt",
-        "EditorUtil"
+        "KEditorUtil"
     ],
     "includePlatforms": [
         "Editor"
